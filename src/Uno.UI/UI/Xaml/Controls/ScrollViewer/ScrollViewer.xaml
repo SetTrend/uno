@@ -16,7 +16,7 @@
 
 	<!-- Default style for Windows.UI.Xaml.Controls.ScrollViewer -->
 	<Style TargetType="ScrollViewer"
-		   x:Key="ManagedScrollViewerStyle">
+				   x:Key="DefaultScrollViewerStyle">
 		<Setter Property="HorizontalScrollMode"
 				Value="Auto" />
 		<Setter Property="VerticalScrollMode"
@@ -301,8 +301,8 @@
 
 	<Style
 		TargetType="ScrollViewer"
-		BasedOn="{StaticResource ManagedScrollViewerStyle}"
-		x:Key="DefaultScrollViewerStyle">
+		BasedOn="{StaticResource DefaultScrollViewerStyle}"
+		x:Key="NativeScrollViewerStyle">
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="ScrollViewer">
