@@ -28,17 +28,6 @@ namespace Windows.UI.Xaml
             return null;
         }
 
-		private protected virtual void OnLoaded()
-        {
-
-        }
-
-		private protected virtual void OnUnloaded()
-        {
-
-        }
-
-
 		#region Transitions Dependency Property
 
 		[GeneratedDependencyProperty(DefaultValue = null, ChangedCallback = true)]
