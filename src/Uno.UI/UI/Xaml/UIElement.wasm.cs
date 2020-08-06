@@ -26,7 +26,6 @@ namespace Windows.UI.Xaml
 
 		private readonly GCHandle _gcHandle;
 
-
 		private static class UIElementNativeRegistrar
 		{
 			private static readonly Dictionary<Type, int> _classNames = new Dictionary<Type, int>();
@@ -79,6 +78,9 @@ namespace Windows.UI.Xaml
 
 		public UIElement(string htmlTag, bool isSvg)
 		{
+			_log = this.Log();
+			_logDebug = _log.IsEnabled(LogLevel.Debug) ? _log : null;
+
 			Initialize();
 
 			_gcHandle = GCHandle.Alloc(this, GCHandleType.Weak);
@@ -358,7 +360,6 @@ namespace Windows.UI.Xaml
 
 		private Rect _arranged;
 		private string _name;
-		internal readonly IList<UIElement> _children = new MaterializableList<UIElement>();
 
 		public string Name
 		{
